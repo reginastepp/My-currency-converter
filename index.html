@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <p>Instantly convert your money between the world’s top currencies—fast, accurate, and always up-to-date.</p>
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="from">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <!-- Add more currencies if you want -->
+    </select>
+    <select id="to">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select>
+    <button onclick="convert()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        async function convert() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            // Fetch rates from a free API
+            let res = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`);
+            let data = await res.json();
+            document.getElementById("result").innerText = `${amount} ${from} = ${data.rates[to]} ${to}`;
+        }
+    </script>
+</body>
+</html>
