@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YourSite Currency Converter</title>
+    <title>Stepp & Stone Co Currency Converter</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -20,6 +20,15 @@
             width: 48px;
             height: 48px;
             margin-right: 16px;
+            background: #0055ff;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09);
         }
         .site-title {
             font-size: 2em;
@@ -86,14 +95,14 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png" alt="Logo" class="logo" />
-        <span class="site-title">YourSite</span>
+        <div class="logo">Ss</div>
+        <span class="site-title">Stepp & Stone Co</span>
     </div>
     <div class="container">
         <h2>Currency Converter</h2>
         <div class="desc">
-            Instantly convert money between dozens of world currencies—always fast, secure, and accurate.<br>
-            Get the latest rates and make smart international transactions.
+            Instantly convert money between dozens of world currencies—simple, fast, and always up-to-date.<br>
+            Find the best exchange rates, calculate conversions, and make international payments easier, all for free!
         </div>
         <label for="amount">Amount</label>
         <input type="number" id="amount" placeholder="Enter amount" min="0" step="any" />
@@ -108,7 +117,7 @@
         <div id="result"></div>
     </div>
     <div class="footer">
-        &copy; 2025 YourSite | Secure and simple currency conversion for everyone.
+        &copy; 2025 Stepp & Stone Co | Secure and simple currency conversion for everyone.
     </div>
     <script>
         // List of popular world currencies
